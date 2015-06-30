@@ -13,6 +13,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+#Author: Gaetano Carlucci
+
 tc="sudo /sbin/tc"
 modprobe="sudo /sbin/modprobe"
 ip="sudo /sbin/ip"
