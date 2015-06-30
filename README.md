@@ -5,14 +5,14 @@
 ## Introduction
 
 This tool allows to emulate a WAN link through the iproute2 package and the NetEm
-Linux module. With tc [49] “traffic control” it is possible to set the queuing discipline,
+Linux module. With tc “traffic control” it is possible to set the queuing discipline,
 limit the link capacity and much more. The NetEm linux module,
 can be employed to set the propagation delay.
 
 ##Examples
 
 ###Disabling the NIC optimizations 
-That NIC optimization parameters may interfere with the experiment. It is RECOMMENDED to disable those.__
+That NIC optimization parameters may interfere with the experiment. It is RECOMMENDED to disable those.<br />
 INPUT PARAMETER__
 1 : Device interface that receives the traffic: example eth0__
 
