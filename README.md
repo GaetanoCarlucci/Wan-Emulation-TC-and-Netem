@@ -13,8 +13,8 @@ can be employed to set the propagation delay.
 
 ###Disabling the NIC optimizations 
 That NIC optimization parameters may interfere with the experiment. It is RECOMMENDED to disable those.<br />
-INPUT PARAMETER <br />
-1 : Device interface that receives the traffic: example eth0
+ **INPUT PARAMETER** <br />
+-  Device interface that receives the traffic: *example eth0*
 
 ```
 sudo apt-get install ethtool
@@ -23,11 +23,11 @@ sudo apt-get install ethtool
 
 ###Set capacity constraint on incoming traffic
 This command introduces link capacity constraints on incoming traffic that comes from a specified IP.<br />
-INPUT PARAMETER<br />
-1 : IP address of the sender machine: example 192.168.0.10<br />
-2 : Bottleneck buffer size in number of packets (1500 byte per packet): example 30<br />
-3 : Device interface that receives the traffic: example eth0<br />
-4 : Capacity contraint: example 250 KBps (equivalent to 2Mbps)<br />
+**INPUT PARAMETER**<br />
+-  IP address of the sender machine: *example 192.168.0.10*<br />
+-  Bottleneck buffer size in number of packets (1500 byte per packet): *example 30*<br />
+-  Device interface that receives the traffic: *example eth0*<br />
+-  Capacity contraint: *example 250 KBps (equivalent to 2Mbps)*<br />
 
 ```
 ./wan_emulation.sh tc_ingress 192.168.0.10 30 eth0 125
@@ -41,10 +41,10 @@ This commands adds fair queuing policy on incoming traffic and must be execute a
 
 ###Set propagation delay 
 This command set propagation delay on the traffic over the specified interface.<br />
-**This command cannot be executed on the same machine that sets the capacity constraint**<br />
-INPUT PARAMETER<br />
-1 : Device interface that introduces the delay on the traffic: example eth0<br />
-2 : Delay we want to set in ms: example 50 ms<br />
+**NB.:** *This command cannot be executed on the same machine that sets the capacity constraint*<br />
+**INPUT PARAMETER**<br />
+- Device interface that introduces the delay on the traffic: *example eth0*<br />
+- Delay we want to set in ms: *example 50 ms*<br />
 
 ```
 ./wan_emulation.sh tc_delay eth0 50
@@ -52,8 +52,8 @@ INPUT PARAMETER<br />
 
 ###Remove propagation delay 
 This command removed the propagation delay on the traffic over the specified interface.<br />
-INPUT PARAMETER<br />
-1 : Device interface that introduces the delay on the traffic: example eth0<br />
+**INPUT PARAMETER**<br />
+- Device interface that introduces the delay on the traffic: *example eth0*<br />
 
 ```
 ./wan_emulation.sh tc_del_delay eth0 
