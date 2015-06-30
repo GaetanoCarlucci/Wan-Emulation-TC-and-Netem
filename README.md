@@ -13,7 +13,7 @@ can be employed to set the propagation delay.
 
 ###Disabling the NIC optimizations 
 That NIC optimization parameters may interfere with the experiment. It is RECOMMENDED to disable those.<br />
- **INPUT PARAMETER** <br />
+ **INPUT PARAMETERS** <br />
 -  Device interface that receives the traffic: *example eth0*
 
 ```
@@ -23,7 +23,7 @@ sudo apt-get install ethtool
 
 ###Set capacity constraint on incoming traffic
 This command introduces link capacity constraints on incoming traffic that comes from a specified IP.<br />
-**INPUT PARAMETER**<br />
+**INPUT PARAMETERS**<br />
 -  IP address of the sender machine: *example 192.168.0.10*<br />
 -  Bottleneck buffer size in number of packets (1500 byte per packet): *example 30*<br />
 -  Device interface that receives the traffic: *example eth0*<br />
@@ -42,7 +42,7 @@ This commands adds fair queuing policy on incoming traffic and must be execute a
 ###Set propagation delay 
 This command set propagation delay on the traffic over the specified interface.<br />
 **NB.:** *This command cannot be executed on the same machine that sets the capacity constraint*<br />
-**INPUT PARAMETER**<br />
+**INPUT PARAMETERS**<br />
 - Device interface that introduces the delay on the traffic: *example eth0*<br />
 - Delay we want to set in ms: *example 50 ms*<br />
 
@@ -52,7 +52,7 @@ This command set propagation delay on the traffic over the specified interface.<
 
 ###Remove propagation delay 
 This command removed the propagation delay on the traffic over the specified interface.<br />
-**INPUT PARAMETER**<br />
+**INPUT PARAMETERS**<br />
 - Device interface that introduces the delay on the traffic: *example eth0*<br />
 
 ```
