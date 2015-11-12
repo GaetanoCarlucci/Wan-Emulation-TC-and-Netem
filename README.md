@@ -34,7 +34,7 @@ This command introduces link capacity constraints on incoming traffic that comes
 ```
 
 ###Set sfq policy on the incoming traffic
-This commands adds fair queuing policy on incoming traffic and must be execute after function tc_ingress.<br />
+This commands adds fair queuing policy on incoming traffic and must be executed after function tc_ingress.<br />
 ```
 ./wan_emulation.sh add_sfq_ingress
 ```
