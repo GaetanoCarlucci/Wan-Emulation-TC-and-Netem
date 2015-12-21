@@ -6,7 +6,7 @@
 
 This tool allows to emulate a WAN link through the iproute2 package and the NetEm
 Linux module. With tc “traffic control” is possible to set the queuing discipline,
-limit the link capacity and much more. The NetEm linux module,
+limit the link capacity and much more. The NetEm linux module
 can be employed to set the propagation delay.
 
 ##Examples
