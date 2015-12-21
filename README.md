@@ -5,14 +5,14 @@
 ## Introduction
 
 This tool allows to emulate a WAN link through the iproute2 package and the NetEm
-Linux module. With tc “traffic control” it is possible to set the queuing discipline,
+Linux module. With tc “traffic control” is possible to set the queuing discipline,
 limit the link capacity and much more. The NetEm linux module,
 can be employed to set the propagation delay.
 
 ##Examples
 
 ###Disabling the NIC optimizations 
-That NIC optimization parameters may interfere with the experiment. It is RECOMMENDED to disable those.<br />
+That NIC optimization parameters may interfere with the experiment. It is RECOMMENDED to disable these optimization.<br />
  **INPUT PARAMETERS** <br />
 -  Device interface that receives the traffic: *example eth0*
 
@@ -34,13 +34,13 @@ This command introduces link capacity constraints on incoming traffic that comes
 ```
 
 ###Set sfq policy on the incoming traffic
-This commands adds fair queuing policy on incoming traffic and must be executed after function tc_ingress.<br />
+This command adds fair queuing policy on incoming traffic and must be executed after function tc_ingress.<br />
 ```
 ./wan_emulation.sh add_sfq_ingress
 ```
 
 ###Set propagation delay 
-This command set propagation delay on the traffic over the specified interface.<br />
+This command sets propagation delay on the traffic over the specified interface.<br />
 **NB.:** *This command cannot be executed on the same machine that sets the capacity constraint*<br />
 **INPUT PARAMETERS**<br />
 - Device interface that introduces the delay on the traffic: *example eth0*<br />
@@ -51,7 +51,7 @@ This command set propagation delay on the traffic over the specified interface.<
 ```
 
 ###Remove propagation delay 
-This command removed the propagation delay on the traffic over the specified interface.<br />
+This command removes the propagation delay on the traffic over the specified interface.<br />
 **INPUT PARAMETERS**<br />
 - Device interface that introduces the delay on the traffic: *example eth0*<br />
 
