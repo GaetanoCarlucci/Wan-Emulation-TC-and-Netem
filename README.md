@@ -27,7 +27,7 @@ This command introduces link capacity constraints on incoming traffic that comes
 -  IP address of the sender machine: *example 192.168.0.10*<br />
 -  Bottleneck buffer size in number of packets (1500 byte per packet): *example 30*<br />
 -  Device interface that receives the traffic: *example eth0*<br />
--  Capacity contraint: *example 250 KBps (equivalent to 2Mbps)*<br />
+-  Capacity contraint: *example 125 KBps (equivalent to 1Mbps)*<br />
 
 ```
 ./wan_emulation.sh tc_ingress 192.168.0.10 30 eth0 125
