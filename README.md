@@ -58,8 +58,9 @@ This command removes the propagation delay on the traffic over the specified int
 ```
 ./wan_emulation.sh tc_del_delay eth0 
 ```
+##Note
+This scripts have been used to emulate the WAN bottleneck link in the paper:
+- G. Carlucci, L. De Cicco, S. Holmer, and S. Mascolo **Analysis and Design of the Google Congestion Control for Web Real-time Communication (WebRTC)** *in Proc. og ACM Mmsys 2016, Klagenfurt, Austria, May 2016* http://c3lab.poliba.it/images/6/65/Gcc-analysis.pdf
 
 ##References
 http://www.linuxfoundation.org/collaborate/workgroups/networking/netem#Emulating_wide_area_network_delays <br />
-This scripts have been used to emulate the WAN bottleneck link in the paper:
-- G. Carlucci, L. De Cicco, S. Holmer, and S. Mascolo **Analysis and Design of the Google Congestion Control for Web Real-time Communication (WebRTC)** *in Proc. og ACM Mmsys 2016, Klagenfurt, Austria, May 2016 * http://c3lab.poliba.it/images/6/65/Gcc-analysis.pdf
