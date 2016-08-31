@@ -114,6 +114,10 @@ function tc_egress() {
    MTU=1540
    LIMIT=$[$MTU*$QUEUE] #Queue length in bytes
   
+   echo "TC SHAPER EGREES ON $HOSTNAME"
+   echo "* rate ${BRATE}kbit ($RATE kbyte)"
+   echo "* dev $DEV"
+
    $tc qdisc add dev $DEV root handle 1: tbf rate ${BRATE}kbit minburst $MTU burst $[$MTU*10] limit $LIMIT
 }
 
