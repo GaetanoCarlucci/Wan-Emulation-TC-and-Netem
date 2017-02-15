@@ -34,7 +34,7 @@ function disabe_nic_opt()
 # This function introduces link capacity constraints on incoming traffic that comes from an IP address
 # INPUT PARAMETER
 # 1 : IP address of the sender machine: example 192.168.0.10
-# 2 : Bottleneck buffer size in number of packets (1500 byte per packet): example 30
+# 2 : Bottleneck buffer size in KB (1000 byte): example 30 (30KB)
 # 3 : Device interface that receives the traffic: example eth0
 # 4 : Capacity constraint: example 250 KBps (equivalent to 2Mbps)
 function tc_ingress()
@@ -44,7 +44,7 @@ function tc_ingress()
    DEV=$3
    KBPS=$4 # kilo bytes per seconds
    BRATE=$[$KBPS*8] #BRATE should be in kbps
-   MTU=1540
+   MTU=1000
    
    LIMIT=$[$MTU*$QUEUE] #Queue length in bytes
 	
@@ -64,7 +64,7 @@ function tc_ingress()
 
 # This function introduces link capacity constraints on incoming traffic
 # INPUT PARAMETER
-# 1 : Bottleneck buffer size in number of packets (1500 byte per packet): example 30
+# 1 : Bottleneck buffer size in KB (1000 byte): example 30 (30KB)
 # 2 : Device interface that receives the traffic: example eth0
 # 3 : Capacity constraint: example 250 KBps (equivalent to 2Mbps)
 function tc_ingress_all()
@@ -73,7 +73,7 @@ function tc_ingress_all()
    DEV=$2
    KBPS=$3 # kilo bytes per seconds
    BRATE=$[$KBPS*8] #BRATE should be in kbps
-   MTU=1540
+   MTU=1000
   
    LIMIT=$[$MTU*$QUEUE] #Queue length in bytes
   
@@ -103,7 +103,7 @@ function tc_del_ingress() {
 
 # This function introduces link capacity constraints on outgoing traffic
 # INPUT PARAMETER
-# 1 : Bottleneck buffer size in number of packets (1500 byte per packet): example 30
+# 1 : Bottleneck buffer size in KB (1000 byte): example 30 (30KB)
 # 2 : Device interface that sends the traffic: example eth0
 # 3 : Capacity constraint: example 250 KBps (equivalent to 2Mbps)
 function tc_egress() {
@@ -111,7 +111,7 @@ function tc_egress() {
    DEV=$2
    KBPS=$3 # kilo bytes per seconds
    BRATE=$[$KBPS*8] #BRATE should be in kbps
-   MTU=1540
+   MTU=1000
    LIMIT=$[$MTU*$QUEUE] #Queue length in bytes
   
    echo "TC SHAPER EGREES ON $HOSTNAME"

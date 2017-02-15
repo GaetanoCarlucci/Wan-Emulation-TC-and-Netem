@@ -25,7 +25,7 @@ sudo apt-get install ethtool
 This command introduces link capacity constraints on incoming traffic that comes from a specified IP.<br />
 **INPUT PARAMETERS**<br />
 -  IP address of the sender machine: *example 192.168.0.10*<br />
--  Bottleneck buffer size in number of packets (1500 byte per packet): *example 30*<br />
+-  Bottleneck buffer size in KB (1000 byte): *example 30 (30KB)*<br />
 -  Device interface that receives the traffic: *example eth0*<br />
 -  Capacity contraint: *example 125 KBps (equivalent to 1Mbps)*<br />
 
